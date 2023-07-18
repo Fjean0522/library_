@@ -9,8 +9,11 @@ function addItem() {
         let li = document.createElement("li");
         li.textContent = itemInputBox.value;
         listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.textContent = "\u00d7";
+        li.appendChild(span);
     }
-    itemInputBox.value = ''
+    itemInputBox.value = '' //resets input box
 }
 
 addItemBtn.addEventListener("click", addItem)
